@@ -1,0 +1,18 @@
+# ==============================================================================
+# DEPENDÊNCIAS DO PROJETO - ARQUITETURA MEDALHÃO DATABRICKS
+# ==============================================================================
+
+# Processamento Distribuído e Armazenamento Colunar ACID
+pyspark>=3.5.0
+delta-spark>=3.2.0
+
+# Manipulação e Serialização de Dados
+pandas>=2.0.0
+pyarrow>=14.0.0
+
+# Ciência de Dados e Machine Learning (Credit Scoring & Inadimplência)
+scikit-learn>=1.3.0
+numpy>=1.24.0
+
+# Geração de Relatórios e Apostilas Executivas em PDF
+reportlab>=4.0.0

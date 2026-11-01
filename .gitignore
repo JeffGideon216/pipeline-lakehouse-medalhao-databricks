@@ -1,0 +1,41 @@
+# Ambientes Virtuais e Dependências
+.venv/
+venv/
+ENV/
+env/
+
+# Configurações Privadas e Chaves de API
+.env
+*.pem
+*.key
+
+# Apache Spark & Delta Lake Locais
+spark-warehouse/
+metastore_db/
+derby.log
+.checkpoint/
+_delta_log/
+
+# Bytecodes Python e Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporários e IDEs
+.tmp*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Apostilas, Anotações Pessoais de Estudo e Scripts de PDF
+docs/APOSTILA_*
+docs/GUIA_*
+docs/JORNADA_*
+docs/gerar_pdf_*.py
+docs/pdfs/
+

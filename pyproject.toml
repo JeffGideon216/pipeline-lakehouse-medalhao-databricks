@@ -1,0 +1,26 @@
+[project]
+name = "projeto-engenharia-analise"
+version = "2.0.0"
+description = "Pipeline de Engenharia de Dados: Arquitetura Medalhão Completa (Bronze, Silver e Gold) no Databricks"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Jefferson Araújo" }
+]
+dependencies = [
+    "pyspark>=3.5.0",
+    "delta-spark>=3.2.0",
+    "pandas>=2.0.0",
+    "pyarrow>=14.0.0",
+    "scikit-learn>=1.3.0",
+    "numpy>=1.24.0",
+    "reportlab>=4.0.0",
+]
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+]
