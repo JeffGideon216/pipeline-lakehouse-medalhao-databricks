@@ -268,6 +268,8 @@ elif aba_selecionada == "👔 1. Performance de Vendedores":
     st.markdown("Monitoramento de faturamento líquido expurgando cancelamentos, ticket médio e atingimento de metas individuais.")
     
     df_vendas = marts["vendedores"].copy()
+    if "nome_vendedor" not in df_vendas.columns and "nome" in df_vendas.columns:
+        df_vendas["nome_vendedor"] = df_vendas["nome"]
     
     # Filtros
     f1, f2, f3 = st.columns(3)
@@ -646,3 +648,4 @@ elif aba_selecionada == "🧠 5. Credit Scoring (Machine Learning)":
         use_container_width=True,
         hide_index=True
     )
+

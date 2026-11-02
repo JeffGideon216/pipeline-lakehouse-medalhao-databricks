@@ -92,7 +92,11 @@ def processar_datamart_vendedores(dados):
         total_pedidos_unicos=("pedido_id", "nunique")
     ).reset_index()
     
-    df_mart = agg_vendas.merge(vendedores[["vendedor_id", "nome", "regiao", "meta_mensal"]], on="vendedor_id", how="inner")
+    # Junta com cadastro de vendedores (renomeia 'nome' para 'nome_vendedor')
+    vend_cols = vendedores[["vendedor_id", "nome", "regiao", "meta_mensal"]].copy()
+    vend_cols.rename(columns={"nome": "nome_vendedor"}, inplace=True)
+    
+    df_mart = agg_vendas.merge(vend_cols, on="vendedor_id", how="inner")
     df_mart["ticket_medio"] = np.where(df_mart["total_pedidos_unicos"] > 0, df_mart["faturamento_liquido"] / df_mart["total_pedidos_unicos"], 0)
     df_mart["percentual_atingimento_meta"] = np.where(df_mart["meta_mensal"] > 0, (df_mart["faturamento_liquido"] / df_mart["meta_mensal"]) * 100, 0)
     
