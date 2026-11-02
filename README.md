@@ -2,6 +2,7 @@
 ## Do Setup com `uv` ao Lakehouse Analítico Completo (Bronze, Silver e Gold)
 
 **Autor:** Jefferson Araújo  
+**Engenharia Aumentada por IA:** Desenvolvido em Pair Programming com **Antigravity (AI Assistant)**  
 **Stack Tecnológica:** Python 3.11, Apache Spark (PySpark 3.5), Delta Lake, Databricks Serverless, Unity Catalog, Kimball Star Schema, `uv`, VS Code  
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pipeline-lakehouse-jefferson.streamlit.app)
@@ -168,3 +169,15 @@ uv run python src/train_credit_scoring.py
 | **`mart_rentabilidade_produtos`** | Datamart | Agrupado por SKU | Curva ABC de lucro cruzada com saldo de estoque e alerta de ruptura. |
 | **`mart_inadimplencia_regional`** | Datamart | Agrupado por Região, UF e Pagamento | Diagnóstico financeiro de risco de crédito por região. |
 | **`clientes_score_credito`** | **Data Product (ML)** | 1 linha por cliente com Score (0-1000) e Rating A-E | Política automatizada de concessão de crédito e prevenção de calote. |
+
+---
+
+## 🤖 6. Engenharia Aumentada por IA (Pair Programming) & Visão de Futuro
+
+> 💬 *"Quem não souber usar Inteligência Artificial como aliada estratégica continuará sendo apenas um dev de dashboards operacionais. O futuro da Engenharia de Dados pertence àqueles que dominam a arquitetura de ponta a ponta e utilizam IA para acelerar a entrega, o aprendizado e a tomada de decisão."*  
+> — **Jefferson Araújo**
+
+Este ecossistema foi construído utilizando a metodologia de **Pair Programming com o assistente Antigravity (AI Assistant)**:
+* **Arquitetura & Clean Code:** Validação rigorosa dos padrões de projeto em Lakehouse (Medallion Architecture, Kimball Star Schema com dimensões conformes e governança via Unity Catalog).
+* **Solução e Depuração Ágil:** Diagnóstico e resolução de desafios de qualidade de dados em tempo real (resgate de 3.443 datas com `try_to_date` e `coalesce`, padronização canônica de CNPJ, orquestração de DAG no Databricks Jobs e Web App em Streamlit).
+* **Aceleração do Domínio Conceitual:** Em vez de depender de códigos prontos sem compreensão, o uso estratégico da IA atuou como um co-piloto e mentor técnico sênior, consolidando o conhecimento necessário para performar no mais alto nível em entrevistas e desafios reais de mercado.

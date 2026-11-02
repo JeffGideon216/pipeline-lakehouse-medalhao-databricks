@@ -128,7 +128,11 @@ with st.sidebar:
     * 🧠 **ML:** Random Forest Scorecard
     
     **Autor:** Jefferson Araújo  
+    **Co-piloto / Pair Programming:** Antigravity (AI Assistant)  
     **Deploy:** Databricks & Streamlit
+    
+    ---
+    > 💡 *"Quem não souber usar IA como aliada estratégica será apenas um dev de dashboards operacionais."*
     """)
 
 # =============================================================================
