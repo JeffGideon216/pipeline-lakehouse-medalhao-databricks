@@ -42,6 +42,7 @@ projeto-engenharia-analise/
 │   ├── silver_transformation.py         # Saneamento e conformidade da Camada Silver
 │   ├── gold_transformation.py           # Modelagem Dimensional (Star Schema) e Datamarts da Gold
 │   ├── train_credit_scoring.py          # Machine Learning: Treinamento e Scorecard de Crédito
+│   ├── datamarts.py                     # Motor analítico e agregações dos Datamarts
 │   └── deploy_databricks.py             # Automação de envio via API REST oficial do Databricks
 │
 ├── notebooks/                           # Notebooks Databricks prontos para produção
@@ -55,6 +56,7 @@ projeto-engenharia-analise/
 │   ├── CASE_DE_NEGOCIO_CAMADA_GOLD.md   # Especificação do Case de Negócio e KPIs C-Level
 │   └── RELATORIO_CAMADA_SILVER_LICOES_APRENDIDAS.md # Relatório Executivo de Saneamento da Silver
 │
+├── app.py                               # Dashboard Analítico Web & Simulador de ML (Streamlit & Plotly)
 ├── pyproject.toml                       # Configuração moderna do projeto e dependências com uv
 ├── requirements.txt                     # Dependências congeladas (pyspark, delta-spark, etc.)
 ├── .env.example                         # Template de variáveis de ambiente do Databricks
@@ -69,20 +71,28 @@ projeto-engenharia-analise/
 * **Processamento Distribuído:** Apache Spark & PySpark 3.5
 * **Armazenamento Colunar ACID:** Delta Lake 3.2
 * **Modelagem de Dados:** Kimball Star Schema (Dimensões Conformes, Fatos e Datamarts)
+* **Ciência de Dados & ML:** Scikit-Learn (Random Forest & Credit Scorecard)
+* **Dashboard Interativo & Web App:** Streamlit & Plotly
 * **Gerenciador de Ambientes:** `uv` (Rust-based, ultrarrápido)
 * **Plataforma de Nuvem:** Databricks Serverless / Unity Catalog (`projeto_crm_ecommerce`)
-* **Visualização & BI:** Databricks SQL / Power BI
+* **Visualização & BI:** Databricks SQL / Power BI / Streamlit
 
 ---
 
 ## ⚡ 4. Como Executar
 
-### 1. Enviar automaticamente os arquivos brutos e notebooks para o Databricks:
+### 1. Iniciar o Dashboard Interativo no Streamlit (Local ou Nuvem):
+```bash
+uv run streamlit run app.py
+```
+*Acesse no navegador (`http://localhost:8501`) para explorar os Datamarts interativos e testar o simulador de concessão de crédito em tempo real.*
+
+### 2. Enviar automaticamente os arquivos brutos e notebooks para o Databricks:
 ```bash
 uv run python src/deploy_databricks.py
 ```
 
-### 2. Executar no Databricks:
+### 3. Executar no Databricks:
 1. Abra o seu Workspace no Databricks.
 2. Execute em sequência:
    * **`01_bronze_ingestion_notebook`** ➔ Gera as 10 tabelas brutas com linhagem em `workspace.bronze`.
@@ -90,7 +100,7 @@ uv run python src/deploy_databricks.py
    * **`03_gold_transformation_notebook`** ➔ Constrói o Star Schema e os 3 Datamarts em `workspace.gold`!
    * **`04_machine_learning_credit_scoring_notebook`** ➔ Treina o modelo preditivo e grava o Credit Score (0-1000) na Gold!
 
-### 3. Executar Localmente via PySpark + Scikit-Learn:
+### 4. Executar Localmente via PySpark + Scikit-Learn:
 ```bash
 # Ingestão Bronze
 uv run python src/bronze_ingestion.py
