@@ -19,6 +19,21 @@ O pipeline completo foi orquestrado e validado no Databricks Serverless, executa
 
 ![Pipeline Databricks Executado com Sucesso](assets/databricks_pipeline_execucao_sucesso.jpg)
 
+### 🖥️ Dashboard Analítico Interativo & Simulador de ML (Streamlit)
+O projeto conta com uma interface analítica completa construída em **Streamlit & Plotly** consumindo os Datamarts da Camada Gold e o Scorecard preditivo:
+
+| 🏢 Painel Executivo (C-Level) | 👔 Performance Comercial & Metas |
+| :---: | :---: |
+| ![Painel Executivo](assets_streamlit/PAINLE_EXECUTIVO.png) | ![Performance Vendedores](assets_streamlit/PERF_VENDEDORES.png) |
+
+| 📦 Rentabilidade & Curva ABC (Ruptura) | 💳 Diagnóstico de Inadimplência Regional |
+| :---: | :---: |
+| ![Rentabilidade](assets_streamlit/RENT_PRODUTOS.png) | ![Inadimplência](assets_streamlit/TABELA_INADIMPLENCIA.png) |
+
+| 🎯 Funil de Vendas CRM (Lead to Cash) | 🧠 Simulador Preditivo de Crédito (ML) |
+| :---: | :---: |
+| ![Funil CRM](assets_streamlit/FUNIL_VENDAS.png) | ![Credit Scoring](assets_streamlit/ANALISE_SCORE.png) |
+
 ---
 
 ## 📁 2. Estrutura Profissional de Diretórios
@@ -28,8 +43,16 @@ O repositório segue os mais altos padrões de arquitetura de projetos de Engenh
 ```text
 projeto-engenharia-analise/
 │
-├── assets/                              # Evidências de Execução e Orquestração no Databricks
+├── assets/                              # Evidências de Execução no Databricks
 │   └── databricks_pipeline_execucao_sucesso.jpg
+│
+├── assets_streamlit/                    # Telas e Evidências dos Datamarts no Streamlit
+│   ├── PAINLE_EXECUTIVO.png
+│   ├── PERF_VENDEDORES.png
+│   ├── RENT_PRODUTOS.png
+│   ├── TABELA_INADIMPLENCIA.png
+│   ├── FUNIL_VENDAS.png
+│   └── ANALISE_SCORE.png
 │
 ├── data/                                # Camada de Dados (Organizada por Zonas)
 │   └── raw/                             # Dados Brutos Imutáveis (CSV originais)
