@@ -4,6 +4,14 @@
 **Autor:** Jefferson Araújo  
 **Stack Tecnológica:** Python 3.11, Apache Spark (PySpark 3.5), Delta Lake, Databricks Serverless, Unity Catalog, Kimball Star Schema, `uv`, VS Code  
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pipeline-lakehouse-jefferson.streamlit.app)
+[![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Databricks](https://img.shields.io/badge/Databricks-Serverless-FF3621?logo=databricks&logoColor=white)](https://databricks.com/)
+[![Delta Lake](https://img.shields.io/badge/Delta_Lake-3.2-00ADEF?logo=delta&logoColor=white)](https://delta.io/)
+
+> 🌐 **Demonstração Interativa ao Vivo:** Acesse o Web App e simule o Credit Scoring em tempo real:  
+> 👉 **[pipeline-lakehouse-jefferson.streamlit.app](https://pipeline-lakehouse-jefferson.streamlit.app)**
+
 ---
 
 ## 🏗️ 1. Arquitetura do Projeto (Medallion Architecture)
@@ -21,6 +29,9 @@ O pipeline completo foi orquestrado e validado no Databricks Serverless, executa
 
 ### 🖥️ Dashboard Analítico Interativo & Simulador de ML (Streamlit)
 O projeto conta com uma interface analítica completa construída em **Streamlit & Plotly** consumindo os Datamarts da Camada Gold e o Scorecard preditivo:
+
+> 🚀 **Experimente ao vivo na nuvem:** [Abrir Dashboard no Streamlit Community Cloud](https://pipeline-lakehouse-jefferson.streamlit.app)
+
 
 | 🏢 Painel Executivo (C-Level) | 👔 Performance Comercial & Metas |
 | :---: | :---: |
@@ -104,11 +115,13 @@ projeto-engenharia-analise/
 
 ## ⚡ 4. Como Executar
 
-### 1. Iniciar o Dashboard Interativo no Streamlit (Local ou Nuvem):
+### 1. Acessar ou Iniciar o Dashboard Interativo (Streamlit):
+* **🌐 Acesso Online Imediato (Nuvem):** [https://pipeline-lakehouse-jefferson.streamlit.app](https://pipeline-lakehouse-jefferson.streamlit.app)
+* **💻 Execução Local:**
 ```bash
 uv run streamlit run app.py
 ```
-*Acesse no navegador (`http://localhost:8501`) para explorar os Datamarts interativos e testar o simulador de concessão de crédito em tempo real.*
+*Acesse localmente no navegador (`http://localhost:8501`) para explorar os Datamarts interativos e testar o simulador de concessão de crédito em tempo real.*
 
 ### 2. Enviar automaticamente os arquivos brutos e notebooks para o Databricks:
 ```bash
