@@ -29,8 +29,7 @@ O repositório segue os mais altos padrões de arquitetura de projetos de Engenh
 projeto-engenharia-analise/
 │
 ├── assets/                              # Evidências de Execução e Orquestração no Databricks
-│   ├── databricks_pipeline_execucao_sucesso.jpg
-│   └── databricks_job_dag_workflow.jpg
+│   └── databricks_pipeline_execucao_sucesso.jpg
 │
 ├── data/                                # Camada de Dados (Organizada por Zonas)
 │   └── raw/                             # Dados Brutos Imutáveis (CSV originais)
