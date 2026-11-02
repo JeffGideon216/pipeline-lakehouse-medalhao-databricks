@@ -14,6 +14,11 @@ O pipeline é estruturado em três camadas corporativas para garantir governanç
 2. **🥈 Silver (Cleaned / Padronizada):** Tratamento rigoroso de qualidade de dados (resgate de 3.443 datas com `try_to_date` e `coalesce`, padronização canônica de CNPJ com 14 dígitos, tipagem decimal contábil, deduplicação e flags semânticas de negócio).
 3. **🥇 Gold (Curated / Negócio):** Modelagem Dimensional Kimball (**Star Schema** com 4 dimensões conformes e 3 tabelas fato) + **3 Datamarts Analíticos** pré-agregados prontos para consumo por **Power BI**, **Tableau** e **Databricks SQL**.
 
+### ⚡ Orquestração em Produção no Databricks (Workflows / Multi-Task Job)
+O pipeline completo foi orquestrado e validado no Databricks Serverless, executando as 4 etapas de ponta a ponta com sucesso:
+
+![Pipeline Databricks Executado com Sucesso](assets/databricks_pipeline_execucao_sucesso.jpg)
+
 ---
 
 ## 📁 2. Estrutura Profissional de Diretórios
@@ -22,6 +27,10 @@ O repositório segue os mais altos padrões de arquitetura de projetos de Engenh
 
 ```text
 projeto-engenharia-analise/
+│
+├── assets/                              # Evidências de Execução e Orquestração no Databricks
+│   ├── databricks_pipeline_execucao_sucesso.jpg
+│   └── databricks_job_dag_workflow.jpg
 │
 ├── data/                                # Camada de Dados (Organizada por Zonas)
 │   └── raw/                             # Dados Brutos Imutáveis (CSV originais)
